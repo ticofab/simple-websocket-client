@@ -14,7 +14,13 @@
         myWebSocket = new WebSocket(endpoint);
 
         myWebSocket.onmessage = function(event) {
-            console.log("onmessage: " + event.data);
+            var leng;
+            if (event.data.size === undefined) {
+                leng = event.data.length
+            } else {
+                leng = event.data.size
+            }
+            console.log("onmessage. size: " + leng + ", content: " + event.data);
         }
 
         myWebSocket.onopen = function(evt) {
