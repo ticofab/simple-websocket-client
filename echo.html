@@ -11,11 +11,7 @@
             myWebSocket.close()
         }
 
-        if (myWebSocket !== undefined) {
-            myWebSocket.close()
-        }
-
-        myWebSocket = new WebSocket("ws://echo.websocket.org");
+        myWebSocket = new WebSocket(endpoint);
 
         myWebSocket.onmessage = function(event) {
             console.log("onmessage: " + event.data);
@@ -51,7 +47,7 @@
         connection to: <input type="text" id="endpoint" name="endpoint" value="ws://echo.websocket.org"  style="width: 200px" ><br>
     </form>
 
-    <input type="button" onclick="connectToWS()" value="connect to echo WebSocket" /><br><br>
+    <input type="button" onclick="connectToWS()" value="connect to WebSocket endpoint" /><br><br>
 
     <form>
         message: <input type="text" id="myMessage" name="myMessage" value="hi there!"><br>
