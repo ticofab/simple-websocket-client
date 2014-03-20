@@ -1,4 +1,4 @@
-simple-websocket-client
+Simple Javascript Websocket Client
 =======================
 
 A very simple html / javascript WebSocket client.
