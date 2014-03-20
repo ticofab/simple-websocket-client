@@ -3,4 +3,4 @@ simple-websocket-client
 
 A very simple html / javascript WebSocket client.
 
-All it does is send a message to the endpoint ws://echo.websocket.org
+It illustrates how to connect to a websocket endpoint, send & receive data, close the connection.
